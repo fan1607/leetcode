@@ -1,6 +1,7 @@
-import org.junit.Test;
+package alg;
 
-import static org.junit.Assert.*;
+import alg._021_合并两个有序链表;
+import org.junit.Test;
 
 public class _021_合并两个有序链表Test {
 

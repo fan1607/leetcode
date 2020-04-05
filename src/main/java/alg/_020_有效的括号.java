@@ -1,3 +1,5 @@
+package alg;
+
 import java.util.Stack;
 
 public class _020_有效的括号 {

@@ -1,3 +1,6 @@
+package alg;
+
+import alg._020_有效的括号;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
