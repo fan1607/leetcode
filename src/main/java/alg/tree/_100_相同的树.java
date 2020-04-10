@@ -10,14 +10,4 @@ public class _100_相同的树 {
                 && isSameTree(p.left, q.left)
                 && isSameTree(p.right, q.right);
     }
-
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 }
