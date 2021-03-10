@@ -41,7 +41,32 @@ public class _102_二叉树的层序遍历 {
         if (levelValues.size() <= level)
             levelValues.add(new LinkedList<>());
         levelValues.get(level).add(node.val);
-        dfs(node.left, levelValues, level + 1); // key -> level + 1
+        dfs(node.left, levelValues, level + 1); // TODO key -> level + 1
         dfs(node.right, levelValues, level + 1);
+    }
+
+    public List<List<Integer>> levelOrder_3(TreeNode root) {
+        if (root == null)
+            return Collections.emptyList();
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> nodes;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            int count = queue.size(); // TODO key
+            nodes = new ArrayList<>(count);
+            TreeNode node;
+            for (int i = 0; i < count; i++) {
+                node = queue.poll();
+                nodes.add(node.val);
+                if (node.left != null)
+                    queue.add(node.left);
+                if (node.right != null)
+                    queue.add(node.right);
+            }
+            result.add(nodes);
+        }
+
+        return result;
     }
 }
