@@ -22,7 +22,7 @@ public class _剑指Offer_12_矩阵中的路径 {
             return true;
         // TODO 标记搜索记录
         board[i][j] = '\0';
-        // TODO 上下左右前进搜索
+        // TODO 上下左右前进搜索，去匹配下一个字符，任意方向能满足即可，用“或”运算
         boolean res = dfs(board, targets, i + 1, j, k + 1)
                 || dfs(board, targets, i - 1, j, k + 1)
                 || dfs(board, targets, i, j + 1, k + 1)

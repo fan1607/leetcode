@@ -24,7 +24,7 @@ public class _剑指Offer11_旋转数组的最小数字 {
         int high = numbers.length - 1;
         int pivot;
         while (low < high) {
-            pivot = low + (high - low) / 2;
+            pivot = low + (high - low) / 2; // TODO 二分查找中枢点
             if (numbers[pivot] < numbers[high]) {
                 high = pivot;
             } else if (numbers[pivot] > numbers[high]) {

@@ -7,9 +7,9 @@ public class _剑指Offer55_II_平衡二叉树 {
     public boolean isBalanced(TreeNode root) {
         if (root == null)
             return true;
-        if (Math.abs(height(root.left) - height(root.right)) > 1)
+        if (Math.abs(height(root.left) - height(root.right)) > 1)// TODO 平衡二叉树：任意节点的左右子树的深度相差不超过1
             return false;
-        return isBalanced(root.left) && isBalanced(root.right);
+        return isBalanced(root.left) && isBalanced(root.right); // TODO 任意节点都是平衡二叉树
     }
 
     private int height(TreeNode node) {
